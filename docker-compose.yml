@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ip-checker:
+    image: zeeemughal/ip-checker:latest
+    container_name: ip-checker
+    ports:
+      - "8000:80"
+    restart: unless-stopped

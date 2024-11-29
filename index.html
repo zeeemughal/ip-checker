@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IP Address Checker - Check your IPv4 and IPv6 addresses with detailed information">
+    <title>IP Address Checker - What is my IP?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="ip-search" placeholder="Enter IP" aria-label="Enter IP or domain address">
+            <button onclick="searchIP()" class="search-btn">Detail</button>
+        </div>
+        <h1>IP Address Checker</h1>
+        <div class="ip-header">
+            <div class="ip-box" id="ipv4-box">
+                <h2>IPv4 Address</h2>
+                <p id="ipv4">Loading...</p>
+                <div class="button-group">
+                    <button onclick="copyToClipboard('ipv4')" class="copy-btn" aria-label="Copy IPv4">Copy</button>
+                    <button onclick="showDetails('ipv4')" class="detail-btn active" aria-label="Show IPv4 details">Details</button>
+                </div>
+            </div>
+            <div class="ip-box" id="ipv6-box">
+                <h2>IPv6 Address</h2>
+                <p id="ipv6">Loading...</p>
+                <div class="button-group">
+                    <button onclick="copyToClipboard('ipv6')" class="copy-btn" aria-label="Copy IPv6">Copy</button>
+                    <button onclick="showDetails('ipv6')" class="detail-btn" aria-label="Show IPv6 details">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ip-details">
+            <h3>IP Information</h3>
+            <div class="table-container">
+                <table class="info-table">
+                    <tbody id="ip-info-table">
+                        <tr>
+                            <th scope="row">IP Address:</th>
+                            <td id="table-ip">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">City:</th>
+                            <td id="table-city">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Region:</th>
+                            <td id="table-region">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Region Code:</th>
+                            <td id="table-region-code">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Country:</th>
+                            <td id="table-country">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Country Code:</th>
+                            <td id="table-country-code">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Network:</th>
+                            <td id="table-network">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">AS Number:</th>
+                            <td id="table-asn">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Organization:</th>
+                            <td id="table-org">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Browser:</th>
+                            <td id="table-browser">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Platform:</th>
+                            <td id="table-platform">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Operating System:</th>
+                            <td id="table-os">Loading...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">User-Agent:</th>
+                            <td id="table-ua">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
